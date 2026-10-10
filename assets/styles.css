@@ -166,3 +166,18 @@ footer .btn{min-height:44px;font-size:12px}
 }
 @media(display-mode:standalone){#install-app,#install-guide{display:none}}
 @media print{#install-guide,#update-app,#offline-status,#install-dialog{display:none!important}}
+
+.use-case{margin:4px 0 15px;padding:12px 14px;background:#f1f6f9;border-left:3px solid #2f6f8f;border-radius:0 7px 7px 0;overflow-wrap:anywhere}
+.use-case h4,.use-case h2{font-size:12px;line-height:1.5;margin:0 0 5px;color:var(--navy);font-weight:700;letter-spacing:0}
+.entry-card .use-case p,.definition-card .use-case p,.domain-card .use-case p,.use-case p{font-size:13px;line-height:1.65;color:var(--text);margin:0;min-height:0}
+.domain-card .use-case{padding:9px 10px;margin:12px 0 0}
+.domain-card .use-case p{font-size:12px}
+#detail-content>.use-case{margin:0 0 24px}
+#detail-content>.use-case h2{font-size:16px}
+#detail-content>.use-case p{font-size:14px}
+.definition-card>div{min-width:0;flex:1}
+.definition-card .definition-source{font-size:12px;color:var(--muted);overflow-wrap:anywhere;margin-top:10px}
+.quick-use-case{display:block;font-size:12px;color:var(--muted);margin:6px 0;line-height:1.65}
+.quick-use-case b{color:var(--navy);margin-right:4px}
+.table-wrap{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain}
+@media(max-width:580px){.use-case{padding:12px}.entry-card .use-case p,.definition-card .use-case p,.domain-card .use-case p{font-size:14px}.quick-row{align-items:flex-start}.domain-grid{grid-template-columns:1fr}.domain-card .use-case{margin-bottom:4px}}

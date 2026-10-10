@@ -19,6 +19,7 @@ Open `index.html` in a modern browser, or run `python -m http.server 8000 --bind
 - Urban mobility: four-step demand planning, trip generation/distribution, mode choice, route assignment, feedback, activity-based modeling, tours and a utility-based mode-choice explorer.
 - Numbers in context: design quantities, units and conditions of application. Example inputs are distinguished from source criteria.
 - Source names beside every tool and concept, printable references and downloadable calculator results.
+- A plain-language use case on every reference, definition and domain card: what it is and where you would use it. Use cases also appear in detail views, printed references and desk checklists.
 - Responsive phone layouts, safe-area support, touch controls and a mobile navigation drawer.
 - Standalone installation, regular/maskable app icons and offline caching of all public concepts and calculators.
 
@@ -46,6 +47,6 @@ Offline access requires one completed online visit. Browser storage removal can 
 
 ## Verification and workspace cleanup
 
-Run `node tools/verify_pwa.js`, `node tools/verify_release.js` and `python tools/verify_package.py` from the working folder. The deployable PWA has no build dependencies; icon regeneration uses Pillow locally.
+Run `node tools/verify_use_cases.js`, `node tools/verify_pwa.js`, `node tools/verify_pwa_client.js`, `node tools/verify_release.js` and `python tools/verify_package.py` from the working folder. The deployable PWA has no build dependencies; icon regeneration uses Pillow locally.
 
 The final upload directory is `github-upload`. Duplicate builds, historical scratch/preview folders and Python bytecode caches are removed from this workspace. The local `Resources` manuals, maintained site assets, source evidence and build/validation tools are preserved. No files outside this workspace are removed. The local packaging scripts do not commit, push or publish the site.

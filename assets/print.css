@@ -23,3 +23,5 @@ svg.engineering-diagram{display:block;width:100%;height:auto;max-width:170mm;bre
 
 .compact-references{list-style:none;padding:0}.compact-references li{display:block;margin:8px 0}.source-chapters{display:block;font-size:9pt}.source-chapters a{margin-right:8px}.references h2{font-size:12pt}
 .mode-shares{margin:12px 0}.mode-shares>div{margin:9px 0}.mode-shares span{display:flex;justify-content:space-between;gap:12px}.mode-track{height:12px;background:#e6edf2;margin-top:4px}.mode-track i{display:block;height:100%;background:#0E7490}.mobile-jump{display:none}
+.use-case{margin:14px 0;padding:10px 12px;background:#f1f6f9;border-left:3px solid #2f6f8f;break-inside:avoid;overflow-wrap:anywhere}.use-case h2,.use-case h4{font-size:12pt;margin:0 0 5px}.use-case p{font-size:10pt;line-height:1.6;margin:0}
+.table-wrap{overflow:visible}
