@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="theme-color" content="#0B263D"><meta name="description" content="Transportation engineering concepts, interactive calculators and urban mobility models with source names.">
+ <title>Transportation Engineering Atlas</title>
+ <link rel="icon" href="assets/favicon.svg?v=1beff5ccff" type="image/svg+xml"><link rel="stylesheet" href="assets/styles.css?v=c44b70bc21">
+ <script src="assets/sources.js?v=1f0c00db52" defer></script><script src="assets/content.js?v=c479d468de" defer></script><script src="assets/expanded-content.js?v=a1a9d00904" defer></script>
+  <script src="assets/research-practice.js?v=b6ade5d619" defer></script><script src="assets/definitions.js?v=f7718d77c7" defer></script><script src="assets/term-diagrams.js?v=5a4443623e" defer></script><script src="assets/numeric-content.js?v=8b7823114c" defer></script><script src="assets/fundamentals.js?v=41efc5d7db" defer></script><script src="assets/calculators.js?v=9d6ccf6f1b" defer></script><script src="assets/explorers.js?v=7e06bc84f7" defer></script><script src="assets/urban-mobility.js?v=c6216daea3" defer></script><script src="assets/print.js?v=c7efd0e7b8" defer></script><script src="assets/app.js?v=e730de7e99" defer></script>
+</head>
+<body>
+ <a class="skip" href="#main">Skip to content</a>
+ <button id="nav-backdrop" class="nav-backdrop" aria-label="Close navigation" hidden></button>
+ <aside id="sidebar-navigation" class="sidebar" aria-label="Primary navigation">
+  <button id="nav-close" class="icon-btn" aria-label="Close menu">✕</button>
+  <a href="#home" class="brand"><span class="brand-symbol">A<span>↗</span></span><span>TRANSPORTATION<br><strong>ENGINEERING ATLAS</strong></span></a>
+  <div class="workspace-label">YOUR ENGINEERING DESK</div>
+  <nav id="primary-nav" aria-label="Workspace sections"><a href="#home" data-nav="home">⌂ <span>Overview</span></a><a href="#fundamentals" data-nav="fundamentals">↗ <span>Fundamental concepts</span></a><a href="#calculators" data-nav="calculators">▧ <span>Calculators</span><small id="calc-count"></small></a><a href="#definitions" data-nav="definitions">Aa <span>Definitions A–Z</span><small id="term-count"></small></a></nav>
+  <div class="workspace-label">ENGINEERING DOMAINS</div><nav id="domain-nav" aria-label="Engineering domains"></nav><nav id="engineering-resources" aria-label="Engineering resources"><a href="#research-desk" data-nav="research-desk">σ <span>Research desk</span></a><a href="#practice-desk" data-nav="practice-desk">⌑ <span>Practitioner desk</span></a><a href="#numbers" data-nav="numbers"># <span>Numbers in context</span></a></nav>
+  <div class="sidebar-bottom"><span class="live-dot"></span> A reference-led workspace<p>Concepts, models and calculations.<br>Source names alongside each reference.</p></div>
+ </aside>
+ <div class="shell">
+  <header class="topbar"><button id="menu-toggle" class="icon-btn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="sidebar-navigation">☰</button><div class="breadcrumb">Workspace <span>/</span> <strong id="crumb">Overview</strong></div><div class="top-actions"><button class="icon-btn" id="print-page" aria-label="Print this view">⎙</button></div></header>
+  <main id="main" tabindex="-1"></main>
+  <footer><span>Transportation Engineering Atlas</span><span>Source names. Transparent assumptions. Built for the work.</span></footer>
+ </div>
+ <dialog id="detail-dialog" aria-labelledby="detail-title"><div class="dialog-toolbar"><span id="dialog-context">REFERENCE DESK</span><button id="close-dialog" class="icon-btn" aria-label="Close detail">✕</button></div><div id="detail-content"></div></dialog>
+ <div id="toast" role="status" aria-live="polite"></div>
+ <noscript><div class="noscript">Enable JavaScript to use the calculators and concept search.</div></noscript>
+</body>
+</html>

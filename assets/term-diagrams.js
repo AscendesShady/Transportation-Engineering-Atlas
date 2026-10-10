@@ -1,0 +1,43 @@
+/* Concept diagrams use illustrative values. No source figure is reproduced. */
+(()=>{
+ 'use strict';
+ const text=(x,y,s)=>`<text x="${x}" y="${y}">${s}</text>`,rect=(x,y,w,h,color='#e6edf2')=>`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="4" fill="${color}"/>`;
+ const line=(x,y,a,b,c='#123b5d')=>`<path d="M${x} ${y}L${a} ${b}" stroke="${c}" stroke-width="3" fill="none"/>`;
+ const road=rect(30,75,420,75)+line(30,112,450,112,'#fff');
+ const car=(x,y,c='#123b5d')=>rect(x,y,35,18,c)+`<circle cx="${x+7}" cy="${y+19}" r="4" fill="#1f2933"/><circle cx="${x+28}" cy="${y+19}" r="4" fill="#1f2933"/>`;
+ const cards={
+  equilibrium:text(30,30,'Compare experienced costs on used routes')+`<path d="M40 115Q240 15 440 115M40 115Q240 215 440 115" fill="none" stroke="#2563eb" stroke-width="4"/>`+text(135,50,'Route A: 10 min')+text(135,190,'Route B: 10 min')+text(30,218,'Illustrative equal costs; not a solved network model.'),
+  systemoptimum:text(30,30,'Network objective covers all affected travelers')+rect(40,75,115,50)+text( 50,105,'Route A')+rect(325,75,115,50)+text(335,105,'Route B')+line(155,100,325,100)+text(35,175,'Evaluate the combined network outcome.')+text(35,210,'Individual and collective objectives can differ.'),
+  access:text(30,30,'Access depends on destinations and connections')+rect(30,80,90,50)+text(40,110,'Homes')+line(125,105,330,105)+rect(335,80,110,50)+text(345,110,'Clinic')+text(30,183,'Proximity, modes, time and barriers all matter.'),
+  daily:text(30,30,'Annual count → daily average → design hour')+rect(30,72,115,55)+text(42,97,'Year total')+text(42,117,'÷ days')+line(150,100,195,100)+rect(200,72,115,55)+text(213,105,'AADT')+line(320,100,365,100)+text(370,105,'K × D')+text(30,183,'Daily average and peak-hour demand are different.'),
+  green:text(30,30,'One cycle: effective green and remaining time')+rect(35,85,185,40,'#0f766e')+rect(220,85,225,40)+text(35,157,'g = 40 s')+text(240,157,'C − g = 50 s')+text(35,198,'Equivalent discharge time; not a phase design.'),
+  speed:text(30,30,'Trip time = moving time + stopped time')+rect(35,80,290,35,'#2563eb')+rect(325,80,90,35,'#d97706')+text(35,153,'Running speed uses moving time')+text(35,185,'Travel speed uses the whole trip time'),
+  queue:text(30,30,'Queue tail, storage and stop line')+road+[70,115,160,205,250].map(x=>car(x,92)).join('')+line(305,65,305,160,'#d97706')+text(315,65,'Stop line')+text(35,190,'Tail ← queued vehicles → service point'),
+  calibration:text(30,30,'Observed evidence and model outputs')+rect(35,75,170,50)+text(45,105,'Field profiles')+rect(275,75,170,50)+text(288,105,'Model profiles')+line(210,100,270,100)+text(35,180,'Compare → diagnose → adjust → recheck'),
+  capacity:text(30,30,'Use a common flow-rate basis')+rect(35,70,340,24,'#2563eb')+rect(35,125,255,24,'#d97706')+text(35,60,'Illustrative demand: 1,200 veh/h')+text(35,177,'Illustrative capacity: 900 veh/h')+text(35,209,'Demand above capacity can accumulate a queue.'),
+  slope:text(30,30,'Road edge and roadside recovery terrain')+line(30,75,145,75)+line(145,75,385,135)+text(35, 60,'Road')+text(190,95,'1V:4H example')+line(385,75,385,135,'#d97706')+line(145,157,385,157,'#2563eb')+text(30,195,'Smooth, traversable terrain is an assumption.'),
+  interval:text(30,30,'Estimate, uncertainty and individual spread')+line(100,105,380,105,'#2563eb')+line(100,90,100,120,'#2563eb')+line(380,90,380,120,'#2563eb')+`<circle cx="240" cy="105" r="8" fill="#d97706"/>`+text(40,160,'Lower limit        Estimate        Upper limit')+text(30,198,'A mean interval is not a trip-time percentile.'),
+  gap:text(30,30,'Gap in priority flow and a waiting minor movement')+road+car(60,87)+car(350,87)+line(120,60,345,60,'#d97706')+rect(210,150,55,65)+car(218,173,'#0f766e')+text(140,50,'Available gap')+text(275,190,'Minor road'),
+  crossfall:text(30,30,'Transverse roadway slope / curve banking')+line(55,90,415,145)+line(55,160,415,160,'#9aaebb')+line(415,145,415,160,'#d97706')+text(70, 70,'Across the carriageway')+text(65,197,'e or crossfall is a slope, not an angle in degrees.'),
+  density:text(30,30,'Density: vehicles occupying roadway length')+road+[50,105,160,215,270,325,380].map(x=>car(x,94)).join('')+line(35,175,445,175,'#2563eb')+text(95,205,'Count / length / lane basis'),
+  sight:text(30,30,'Stopping distance = reaction + braking')+road+car(40,87)+rect(70,160,145,15,'#2563eb')+rect(215,160,210,15,'#d97706')+text(50,205,'Reaction segment')+text(260,205,'Braking segment'),
+  walkway:text(30,30,'Total width minus preempted width')+rect(40,80,370,50,'#2563eb')+rect(40,80,99,50,'#d97706')+text(40,165,'Preempted 0.8 m')+text(245,165,'Usable 2.2 m')+text(40,202,'Hypothetical 3.0 m total walkway'),
+  headway:text(30,30,'Headway is time; spacing is distance')+road+car(75,91)+car(325,91)+line(120,60,320,60,'#d97706')+text(135, 50,'Elapsed time at a point')+text(75,196,'Follow a consistent vehicle reference point.'),
+  comparison:text(30,30,'Compare matched flow counts')+rect(35, 70,310,25,'#2563eb')+rect(35,130,330,25,'#d97706')+text(35, 60,'Modeled: 950 veh/h')+text(35,190,'Observed: 1,000 veh/h'),
+  grade:text(30,30,'Longitudinal grade')+line(45,145,410,85)+line(45,145,410,145,'#9aaebb')+line(410,85,410,145,'#d97706')+text(70,190,'Rise / horizontal distance × 100%'),
+  vertical:text(30,30,'A vertical curve joins two grades')+`<path d="M35 160Q240 15 445 160" fill="none" stroke="#2563eb" stroke-width="5"/>`+text(35, 70,'Entry +2%')+text(335, 70,'Exit −2%')+text(80,208,'A = 4 points; L = K × A'),
+  lanes:text(30,30,'Group lanes consistently with movements')+rect(45, 60,385,95)+[80,130].map(y=>line(45,y,430,y,'#fff')).join('')+[80,180,280].map(x=>car(x,93)).join('')+text(45,198,'Group flow, lane count and busiest-lane flow'),
+  los:text(30,30,'Facility-specific operating categories')+['A','B','C','D','E','F'].map((s,i)=>rect(35+i*68,85, 60,50,i<3?'#e6edf2':'#d9e1e6')+text(55+i*68,116,s)).join('')+text(35,190,'Choose the measure and facility before the band.'),
+  paired:text(30,30,'Analyze one difference per matched pair')+[0,1,2].map(i=>rect( 40,60+i*45,100,28)+text(55, 80+i*45,'A'+(i+1))+rect(220,60+i*45,100,28)+text(235,80+i*45,'B'+(i+1))+text(350,80+i*45,'→ Δ'+(i+1))).join(''),
+  occupancy:text(30,30,'Vehicle distance and passenger distance')+road+car(60,95)+[0,1,2].map(i=>`<circle cx="${200+i*45}" cy="105" r="10" fill="#0f766e"/>`).join('')+text(40,190,'Distance × occupancy = person distance'),
+  phf:text(30,30,'Four consecutive 15-minute counts')+[200,250,300,250].map((n,i)=>rect(45+i*100,160-n/3,65,n/3,i===2?'#d97706':'#2563eb')+text(50+i*100,192,String(n))).join('')+text(40,217,'Hour = 1,000; highest quarter = 300'),
+  percentile:text(30,30,'A percentile is a distribution cut point')+line( 40,160,440,160,'#9aaebb')+`<path d="M40 155Q100 20 200 115T440 155" fill="none" stroke="#2563eb" stroke-width="3"/>`+line(365,65,365,170,'#d97706')+text(315, 60,'p95')+text( 40,205,'Tail cut point; not a confidence interval.'),
+  reliability:text(30,30,'Mean, high percentile and free-flow reference')+rect(40, 60,180,20,'#0f766e')+rect(40,105,240,20,'#2563eb')+rect(40,150,360,20,'#d97706')+text(245, 75,'Free flow')+text(305,120,'Mean')+text( 40,205,'High percentile / free flow → PTI'),
+  sample:text(30,30,'Population and selected observations')+Array.from({length:24},(_,i)=>`<circle cx="${50+(i%8)*52}" cy="${75+Math.floor(i/8)*40}" r="8" fill="${[1,6,10,20].includes(i)?'#d97706':'#d9e1e6'}"/>`).join('')+text( 40,205,'Orange: sample; coverage and selection matter.'),
+  transit:text(30,30,'Revenue service, transfers and positioning')+rect(40, 70,170,45,'#0f766e')+rect(270, 70,170,45)+text(50, 100,'Passenger service')+text(282,100,'Positioning')+text(40,180,'Revenue measures exclude deadhead.'),
+  saturation:text(30,30,'Startup vehicles then stable queued discharge')+[0,1,2,3,4,5,6].map((i)=>car(40+i*57, 90,i<4?'#9aaebb':'#2563eb')).join('')+text(40,160,'First four: startup effects')+text(40,200,'Later headways support saturation measurement.'),
+  errors:text(30,30,'Decision errors depend on whether the null is true')+rect(35,65,405,110)+text(50,95,'Reject true null → Type I error')+text(50,145,'Do not reject false null → Type II error')+text(35,207,'Nonrejection does not establish equivalence.'),
+  workzone:text(30,30,'Traffic space, buffer and work space')+road+rect(160,78, 90,65,'#d97706')+rect(250,78,190,65,'#9aaebb')+text(160, 60,'Buffer')+text(285,60,'Work space')+text(35,192,'Keep work and storage outside the buffer.')
+ };
+ window.ATLAS_TERM_DIAGRAMS={render:key=>cards[key]?`<svg class="engineering-diagram" viewBox="0 0 480 230" role="img" aria-label="${key} concept example">${cards[key]}</svg>`:''};
+})();

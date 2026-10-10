@@ -1,0 +1,25 @@
+/* Separate, normal-flow print document: no modal, top layer, or viewport-height limits. */
+@page{margin:12mm}
+*{box-sizing:border-box}html,body{margin:0;padding:0;height:auto;max-height:none;overflow:visible}
+body{color:#1f2933;background:white;font:11pt/1.5 'Segoe UI',Arial,sans-serif}
+.print-toolbar{padding:12px;background:#e6edf2;display:flex;gap:14px;align-items:center;font-size:12px}
+.print-toolbar button{padding:8px 15px;cursor:pointer;border:1px solid #123b5d;background:white;color:#123b5d;border-radius:4px}
+.print-sheet{max-width:185mm;margin:16px auto;padding:8mm;overflow:visible}
+h1{font-size:23pt;line-height:1.15;margin:10px 0;overflow-wrap:anywhere}h2{font-size:14pt;margin:18px 0 8px;break-after:avoid}h3{font-size:11pt;margin:12px 0 6px;break-after:avoid}
+p{margin:8px 0}.eyebrow{font-size:9pt;color:#123b5d}.detail-layout,.explore-grid,.detail-layout:has(.explore-panel){display:block;width:auto}
+.calc-panel,.explore-panel,.source-method,.references,.term-diagram,.numeric-context{position:static;max-height:none;height:auto;overflow:visible;break-inside:auto;margin:16px 0;padding:12px;border:1px solid #d9e1e6;border-radius:4px}
+.slider-field{margin:8px 0;break-inside:avoid}.slider-field label{display:flex;justify-content:space-between;gap:20px}.slider-field output{font-weight:bold}
+.result-box{border-top:1px solid #d9e1e6;padding-top:10px}.result-number{font-size:22pt;font-weight:bold}.result-number span{font-size:11pt}.result-detail{display:flex;justify-content:space-between;gap:16px;padding:4px 0}.result-detail strong{overflow-wrap:anywhere;text-align:right}
+.live-equation{border-left:3px solid #2563eb;padding:10px;margin:12px 0}.live-equation span,.live-equation code,.live-equation strong{display:block;margin:5px 0}.live-equation code{font:9pt/1.6 Consolas,monospace;white-space:normal;overflow-wrap:anywhere}
+.table-scroll{overflow:visible;width:100%}table{width:100%;border-collapse:collapse;font-size:9pt;margin:12px 0;table-layout:auto}th,td{border:1px solid #bfcdd7;padding:6px;text-align:left;overflow-wrap:anywhere}thead{display:table-header-group}tr{break-inside:avoid}
+svg.engineering-diagram{display:block;width:100%;height:auto;max-width:170mm;break-inside:avoid;background:white;margin:12px 0}svg text{font:16px 'Segoe UI',Arial,sans-serif;fill:#1f2933}
+.los-scale{display:flex;gap:4px;break-inside:avoid}.los-scale>div{flex:1;text-align:center;border:1px solid #bfcdd7;padding:8px}.los-scale strong,.los-scale span{display:block}.los-scale .selected{border:3px solid #123b5d}
+.visual-caption,.reader-notice{font-size:9pt;color:#596b79}.visual-bars>div{margin:10px 0}.visual-bars span{display:flex;justify-content:space-between}.visual-track{background:#e6edf2;height:10px}.visual-track>div{height:10px}
+.reader-text{white-space:pre-wrap;overflow-wrap:anywhere;font:9pt/1.5 Consolas,monospace;margin:12px 0;max-height:none;overflow:visible}
+.references li{margin:12px 0;overflow-wrap:anywhere}.references span{display:block}.references a{color:#123b5d}.walking-dot{display:none}
+@media print{.print-toolbar{display:none}.print-sheet{max-width:none;margin:0;padding:0}body{-webkit-print-color-adjust:exact;print-color-adjust:exact}a{color:black}}
+
+.four-step-stages>section{margin:12px 0;padding:8px;border:1px solid #d9e1e6;break-inside:auto}.four-step-stages table{font-size:9pt}
+
+.compact-references{list-style:none;padding:0}.compact-references li{display:block;margin:8px 0}.source-chapters{display:block;font-size:9pt}.source-chapters a{margin-right:8px}.references h2{font-size:12pt}
+.mode-shares{margin:12px 0}.mode-shares>div{margin:9px 0}.mode-shares span{display:flex;justify-content:space-between;gap:12px}.mode-track{height:12px;background:#e6edf2;margin-top:4px}.mode-track i{display:block;height:100%;background:#0E7490}.mobile-jump{display:none}
