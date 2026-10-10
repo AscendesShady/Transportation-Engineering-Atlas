@@ -1,0 +1,25 @@
+{
+  "id": "./",
+  "name": "Transportation Engineering Atlas",
+  "short_name": "Engineering Atlas",
+  "description": "Transportation engineering concepts, calculators and urban mobility models, available offline.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "./index.html#home",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0B263D",
+  "theme_color": "#0B263D",
+  "prefer_related_applications": false,
+  "categories": ["education", "productivity"],
+  "icons": [
+    {"src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "assets/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ],
+  "shortcuts": [
+    {"name": "Urban mobility", "url": "./index.html#domain/urban-mobility"},
+    {"name": "Calculators", "url": "./index.html#calculators"},
+    {"name": "Fundamental concepts", "url": "./index.html#fundamentals"}
+  ]
+}

@@ -131,3 +131,38 @@ dialog:has(.explore-panel){width:min(1150px,calc(100% - 36px))}.detail-layout:ha
  .empty{padding:28px 16px}
 }
 @media print{.nav-backdrop,.mobile-jump,#nav-close{display:none!important}.navigation-open{overflow:visible}.mode-track i{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+
+/* Installed app: device cutouts, home indicators and compact phone chrome. */
+.top-actions{display:flex;align-items:center;gap:8px}
+.install-button{white-space:nowrap}
+#offline-status{font-size:12px;align-self:center;color:var(--muted)}
+#offline-status[data-ready="true"]{color:#0F766E}
+footer{align-items:center;flex-wrap:wrap}
+footer .btn{min-height:44px;font-size:12px}
+.install-help{padding:24px;max-width:520px}
+.install-help img{border-radius:16px;margin-bottom:12px}
+.install-help h1{font-size:25px;margin-bottom:14px}
+.install-help p{font-size:15px;line-height:1.7;margin-bottom:18px}
+.install-help .btn{min-height:44px}
+@media(max-width:850px){
+ main{padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+ footer{padding-bottom:max(20px,env(safe-area-inset-bottom));padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+ .sidebar{padding-top:max(22px,env(safe-area-inset-top));padding-bottom:max(30px,env(safe-area-inset-bottom))}
+ .topbar{height:auto;min-height:60px;padding-top:env(safe-area-inset-top);padding-left:max(12px,env(safe-area-inset-left));padding-right:max(12px,env(safe-area-inset-right))}
+ dialog,dialog:has(.explore-panel){max-height:calc(100dvh - 16px - env(safe-area-inset-top) - env(safe-area-inset-bottom));margin-top:max(8px,env(safe-area-inset-top));margin-bottom:max(8px,env(safe-area-inset-bottom))}
+ .dialog-toolbar{padding-top:max(8px,env(safe-area-inset-top))}
+ .sidebar #nav-close{top:max(8px,env(safe-area-inset-top))}
+ .install-button{font-size:12px;padding:8px 10px}
+}
+@media(max-width:580px){
+ .workspace-root,.topbar #print-page{display:none}
+ .breadcrumb{font-size:13px;line-height:1.4}
+ .top-actions{flex-shrink:0}
+ .topbar{gap:8px}
+ .install-help{padding:20px 16px}
+ #offline-status{flex-basis:100%;order:2}
+ .slider-field label{flex-wrap:wrap;gap:5px}
+ .slider-field output{margin-left:auto}
+}
+@media(display-mode:standalone){#install-app,#install-guide{display:none}}
+@media print{#install-guide,#update-app,#offline-status,#install-dialog{display:none!important}}
