@@ -66,6 +66,6 @@ Offline access requires one completed online visit. Browser storage removal can 
 
 ## Verification and workspace cleanup
 
-Run `node tools/verify_use_cases.js`, `node tools/verify_pwa.js`, `node tools/verify_pwa_client.js`, `node tools/verify_release.js` and `python tools/verify_package.py` from the working folder. The deployable PWA has no build dependencies; icon regeneration uses Pillow locally.
+Run `node tools/verify_los_boundaries.js`, `node tools/verify_use_cases.js`, `node tools/verify_pwa.js`, `node tools/verify_pwa_client.js`, `node tools/verify_release.js` and `python tools/verify_package.py` from the working folder. The deployable PWA has no build dependencies; icon regeneration uses Pillow locally.
 
 The final upload directory is `github-upload`. Duplicate builds, historical scratch/preview folders and Python bytecode caches are removed from this workspace. The local `Resources` manuals, maintained site assets, source evidence and build/validation tools are preserved. No files outside this workspace are removed. The local packaging scripts do not commit, push or publish the site.
