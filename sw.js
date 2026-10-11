@@ -1,13 +1,17 @@
 /* Generated public app-shell cache. Rebuild using tools/package_site.py. */
 'use strict';
-const VERSION = 'd349b11b7c9d3827';
+const VERSION = '7b125fe85e8e7c65';
 const PRECACHE_URLS = [
   "index.html",
   "print.html",
   "manifest.json",
+  "LICENSE",
+  "DISCLAIMER.md",
+  "assets/author.jpg?v=ff94f05694",
   "assets/icons/apple-touch-icon.png?v=04a35399a5",
   "assets/favicon.svg?v=1beff5ccff",
-  "assets/styles.css?v=56d90d3321",
+  "assets/styles.css?v=2f277cc7a5",
+  "assets/site-info.js?v=2467ec100a",
   "assets/sources.js?v=1f0c00db52",
   "assets/content.js?v=c479d468de",
   "assets/expanded-content.js?v=a1a9d00904",
@@ -20,8 +24,8 @@ const PRECACHE_URLS = [
   "assets/explorers.js?v=7e06bc84f7",
   "assets/urban-mobility.js?v=c6216daea3",
   "assets/use-cases.js?v=92fbe2f330",
-  "assets/print.js?v=c7efd0e7b8",
-  "assets/app.js?v=aacbdeb59d",
+  "assets/print.js?v=bf94f90201",
+  "assets/app.js?v=280a072faf",
   "assets/pwa.js?v=cbfaa1dcac",
   "assets/icons/icon-192.png?v=dd14820c4e",
   "assets/print.css?v=71605f2d84",
@@ -31,12 +35,16 @@ const PRECACHE_URLS = [
   "assets/icons/icon-maskable-512.png"
 ];
 const PRECACHE_INTEGRITY = {
-  "index.html": "sha256-v8b3Y6t1fwrrzcylL0yk+6XpAELwFIxjO2xWxW+KJIM=",
+  "index.html": "sha256-lx8horURYyqochhPcY+i6zvSPmo06DJYNbxc5oMJ0js=",
   "print.html": "sha256-2ZkGj3ig7aB8Cf3Ar1PPqp8bMr9r1Z1Puhsei98nSHo=",
   "manifest.json": "sha256-f1S32QP7Libjp00C9HlcW3JIjjDrLX6xRgkKCVakI7s=",
+  "LICENSE": "sha256-/lIU2F6fBkO12lMAN9jOxbLEE2RNRRLg+y+imHQKyw4=",
+  "DISCLAIMER.md": "sha256-jX7BFWQEBEI/BeSVVQyEAlNAtcFlyXyOND1W8nFhT48=",
+  "assets/author.jpg?v=ff94f05694": "sha256-/5TwVpQ3pPJ7WIIRZPMyrrzXYJMkZItULogYgconUMI=",
   "assets/icons/apple-touch-icon.png?v=04a35399a5": "sha256-BKNTmaVXScXN9o3CADaFqfAbaRQVIN37ecrV2kGiuV4=",
   "assets/favicon.svg?v=1beff5ccff": "sha256-G+/1zP9osQtVL8/wOR+jo5E64xSmPHH85tjGHCTGVH4=",
-  "assets/styles.css?v=56d90d3321": "sha256-VtkNMyE/x+qPMk8v1Wu7nhWpK8TmTtQsEljG99auyOE=",
+  "assets/styles.css?v=2f277cc7a5": "sha256-Lyd8x6WhfRNFlH+touEqk52iNi391eu02TJiCnTk97k=",
+  "assets/site-info.js?v=2467ec100a": "sha256-JGfsEApro1yVwA/G3+PGKKRnM/ro7BJ2I1cq53yyjUE=",
   "assets/sources.js?v=1f0c00db52": "sha256-HwwA21Jf73CqaH7fVTpB1GGTUbsOpqoSw9uN8YCgo2g=",
   "assets/content.js?v=c479d468de": "sha256-xHnUaN4hXA/nc7lf+2da263UOl9Rt4GVJqZ4fludsh8=",
   "assets/expanded-content.js?v=a1a9d00904": "sha256-oanQCQTX2plQ2ZwX5BZBKm5Mp91eePuF5sZerIBzsIU=",
@@ -49,8 +57,8 @@ const PRECACHE_INTEGRITY = {
   "assets/explorers.js?v=7e06bc84f7": "sha256-fga8hPfikhS6WG+PSD03o/bWJUh04zFLUBH7MxR/x5w=",
   "assets/urban-mobility.js?v=c6216daea3": "sha256-xiFtrqMx+ecg+h6a0HuPmFEJ81UQxu+eiqZvhr7dkhk=",
   "assets/use-cases.js?v=92fbe2f330": "sha256-kvvi8zAx2MHddhMnpk56OY+c/hx/d/85fVD7w3bDMq8=",
-  "assets/print.js?v=c7efd0e7b8": "sha256-x+/Q57gSld0fXAbe/8Q6yEO+ODzC4wXsT2fDnJeojzs=",
-  "assets/app.js?v=aacbdeb59d": "sha256-qsvetZ0AFgldUN4stu6LJZTCvj+Hmrxf5zQAwFRepss=",
+  "assets/print.js?v=bf94f90201": "sha256-v5T5AgFonSH1ZivbAKyIsonmD16MRvcmZxiSEg1vhe8=",
+  "assets/app.js?v=280a072faf": "sha256-KAoHL68ZcpZjhgsGorxOI4mLkIjypRn3kXh9cXoBj/Q=",
   "assets/pwa.js?v=cbfaa1dcac": "sha256-y/qh3Ky0kcCsPiN3UlsLCLKPG8K3SBVaR5hTb8HGtpM=",
   "assets/icons/icon-192.png?v=dd14820c4e": "sha256-3RSCDE56Xa15HqySD9ZGh0pJ2Ix28oMtD/wTdgZGuSY=",
   "assets/print.css?v=71605f2d84": "sha256-cWBfLYQafEy2BwG8TkTb7AY/f59eB4epJNCk/2WNiTc=",

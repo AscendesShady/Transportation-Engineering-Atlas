@@ -2,6 +2,25 @@
 
 An installable, offline-capable engineering reference website with concepts, calculators, definitions and urban mobility models. Open **index.html**. No build service, framework, account, API key or external CDN is needed.
 
+## Author and credits
+
+**Md. Shadman Sakib Chowdhury**
+
+- M.Sc. in Transportation and Civil Engineering, BUET
+- B.Sc. in Civil Engineering, BUET
+
+Created with **Codex GPT-6.1 Sol** and **Claude Opus 5.5**.
+
+The reference atlas is grounded in the manuals and references identified in each tool and concept's Sources section. The author page includes the supplied portrait; embedded photo metadata is removed from the public copy without changing its pixels.
+
+## License and disclaimer
+
+Copyright © 2026 Md. Shadman Sakib Chowdhury. All rights reserved, to the extent of rights owned or authorized to be licensed. This is a restrictive personal-use license, not an open-source license. Viewing, PWA installation and private study print/export copies are permitted; republication, redistribution and commercial reuse of protected material require permission, subject to applicable law and platform terms. Read [LICENSE](LICENSE).
+
+Users must independently check results, units, assumptions, source editions and current project requirements. The atlas is educational reference material, without warranties; liability is limited to the maximum extent allowed by applicable law. Nothing excludes rights or liabilities that cannot legally be excluded. Read [DISCLAIMER.md](DISCLAIMER.md) and the site's **License & disclaimer** page.
+
+A public GitHub repository still permits viewing and forking under [GitHub's terms](https://docs.github.com/en/site-policy/github-terms/github-terms-of-service). Restrictions do not create technical copy protection or promise absolute immunity from liability.
+
 ## Publish on GitHub Pages
 
 Upload **the contents of the final `github-upload` folder** to the root of your website repository. Keep all included files together, especially `index.html`, `manifest.json`, `sw.js` and the complete `assets` folder. If using the ZIP, extract its contents first; do not upload the ZIP as the website.

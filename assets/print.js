@@ -9,7 +9,8 @@
   copy.querySelectorAll('[id]').forEach(node=>node.removeAttribute('id'));
   copy.querySelectorAll('a[href]').forEach(a=>a.href=new URL(a.getAttribute('href'),location.href).href);
   const css=new URL('assets/print.css',location.href).href;
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)} — printable reference</title><link rel="stylesheet" href="${esc(css)}"></head><body><div class="print-toolbar"><button onclick="window.print()">Print / Save PDF</button><span>Full reference with the current values. Select paper size and margins in the print dialog.</span></div><main class="print-sheet">${copy.innerHTML}<p class="reader-notice">Transportation Engineering Atlas</p></main></body></html>`;
+  const terms=new URL('index.html#terms',location.href).href;
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)} — printable reference</title><link rel="stylesheet" href="${esc(css)}"></head><body><div class="print-toolbar"><button onclick="window.print()">Print / Save PDF</button><span>Full reference with the current values. Select paper size and margins in the print dialog.</span></div><main class="print-sheet">${copy.innerHTML}<p class="reader-notice">Transportation Engineering Atlas<br>${esc(ATLAS_SITE.copyright)}<br>Educational reference only. Independent verification is required. <a href="${esc(terms)}">License & disclaimer</a></p></main></body></html>`;
  }
  let snapshot=null;
  function open(element,title){snapshot={html:createHTML(element,title),title};return !!window.open(new URL('print.html',location.href).href,'_blank');}
