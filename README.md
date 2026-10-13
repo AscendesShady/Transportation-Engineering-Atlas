@@ -33,6 +33,8 @@ Open `index.html` in a modern browser, or run `python -m http.server 8000 --bind
 
 ## Included content
 
+The interface draws design inspiration from [Liquid Glass Widgets](https://github.com/sdegenaar/liquid_glass_widgets): floating frosted navigation, pill controls, soft rim highlights and rounded surfaces. This is an original CSS adaptation for the static web app. Reference cards, tables and calculator results use opaque reading surfaces. Reduced motion, increased contrast and browsers without backdrop blur have simpler fallbacks; printed references retain their existing layout.
+
 - Overview followed immediately by Fundamental concepts.
 - Calculators, searchable Definitions A–Z and engineering domains.
 - Urban mobility: four-step demand planning, trip generation/distribution, mode choice, route assignment, feedback, activity-based modeling, tours and a utility-based mode-choice explorer.

@@ -3,12 +3,14 @@
  'use strict';
  const $=id=>document.getElementById(id),install=$('install-app'),guide=$('install-guide'),status=$('offline-status'),update=$('update-app'),help=$('install-dialog');
  let prompt=null,registration=null,reloading=false,updateRequested=false,installed=false;
- const standalone=()=>matchMedia('(display-mode: standalone)').matches||navigator.standalone===true;
- function refreshInstall(){install.hidden=!prompt||standalone()||installed;guide.hidden=standalone()||installed;}
+ const appModes=['standalone','minimal-ui','fullscreen','window-controls-overlay'].map(mode=>matchMedia(`(display-mode: ${mode})`));
+ const standalone=()=>appModes.some(mode=>mode.matches)||navigator.standalone===true;
+ function refreshInstall(){install.hidden=standalone()||installed;guide.hidden=standalone()||installed;}
  function offlineState(ready){status.hidden=false;status.dataset.ready=String(ready);status.textContent=ready?'Available offline':navigator.onLine?'Preparing offline access…':'Offline access is not ready';}
  window.addEventListener('beforeinstallprompt',event=>{event.preventDefault();prompt=event;refreshInstall();});
  window.addEventListener('appinstalled',()=>{installed=true;prompt=null;refreshInstall();help.close();});
- matchMedia('(display-mode: standalone)').addEventListener('change',refreshInstall);
+ appModes.forEach(mode=>mode.addEventListener('change',refreshInstall));
+ window.addEventListener('pageshow',refreshInstall);
  function showGuide(){help.showModal();$('close-install').focus();}
  install.onclick=async()=>{
   if(!prompt){showGuide();return;}

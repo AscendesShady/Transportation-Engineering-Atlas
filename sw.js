@@ -1,6 +1,6 @@
 /* Generated public app-shell cache. Rebuild using tools/package_site.py. */
 'use strict';
-const VERSION = '2d93b908055c7811';
+const VERSION = '4b335ac566b6f243';
 const PRECACHE_URLS = [
   "index.html",
   "print.html",
@@ -10,7 +10,7 @@ const PRECACHE_URLS = [
   "assets/author.jpg?v=ff94f05694",
   "assets/icons/apple-touch-icon.png?v=04a35399a5",
   "assets/favicon.svg?v=1beff5ccff",
-  "assets/styles.css?v=fe9e18ea6e",
+  "assets/styles.css?v=e66d7dcdcd",
   "assets/site-info.js?v=2467ec100a",
   "assets/sources.js?v=1f0c00db52",
   "assets/content.js?v=e760f1deca",
@@ -26,7 +26,7 @@ const PRECACHE_URLS = [
   "assets/use-cases.js?v=92fbe2f330",
   "assets/print.js?v=bf94f90201",
   "assets/app.js?v=490836c217",
-  "assets/pwa.js?v=cbfaa1dcac",
+  "assets/pwa.js?v=8b9383a674",
   "assets/icons/icon-192.png?v=dd14820c4e",
   "assets/print.css?v=71605f2d84",
   "assets/print-page.js?v=0153be5c5b",
@@ -35,7 +35,7 @@ const PRECACHE_URLS = [
   "assets/icons/icon-maskable-512.png"
 ];
 const PRECACHE_INTEGRITY = {
-  "index.html": "sha256-IH/OOIOJ3FLy7RQ4pIgp2Dt0XD9RwQejtK/0bdTJbNM=",
+  "index.html": "sha256-a0b6jEVnS6irh+hsoi30cZ1kFgZbWvQNl3ihQ7HdUFE=",
   "print.html": "sha256-2ZkGj3ig7aB8Cf3Ar1PPqp8bMr9r1Z1Puhsei98nSHo=",
   "manifest.json": "sha256-f1S32QP7Libjp00C9HlcW3JIjjDrLX6xRgkKCVakI7s=",
   "LICENSE": "sha256-/lIU2F6fBkO12lMAN9jOxbLEE2RNRRLg+y+imHQKyw4=",
@@ -43,7 +43,7 @@ const PRECACHE_INTEGRITY = {
   "assets/author.jpg?v=ff94f05694": "sha256-/5TwVpQ3pPJ7WIIRZPMyrrzXYJMkZItULogYgconUMI=",
   "assets/icons/apple-touch-icon.png?v=04a35399a5": "sha256-BKNTmaVXScXN9o3CADaFqfAbaRQVIN37ecrV2kGiuV4=",
   "assets/favicon.svg?v=1beff5ccff": "sha256-G+/1zP9osQtVL8/wOR+jo5E64xSmPHH85tjGHCTGVH4=",
-  "assets/styles.css?v=fe9e18ea6e": "sha256-/p4Y6m7A+KkjSqDOfmVoejw4dVGouHs/T0ifDDM7Ds4=",
+  "assets/styles.css?v=e66d7dcdcd": "sha256-5m19zc2RLELmJWur1qObMJ3nKvVWYCAhiTAQLjFa44E=",
   "assets/site-info.js?v=2467ec100a": "sha256-JGfsEApro1yVwA/G3+PGKKRnM/ro7BJ2I1cq53yyjUE=",
   "assets/sources.js?v=1f0c00db52": "sha256-HwwA21Jf73CqaH7fVTpB1GGTUbsOpqoSw9uN8YCgo2g=",
   "assets/content.js?v=e760f1deca": "sha256-52Dx3soGspwX3qfKhDFQcv0Ysg/PrhKPW6T7HIOMZEY=",
@@ -59,7 +59,7 @@ const PRECACHE_INTEGRITY = {
   "assets/use-cases.js?v=92fbe2f330": "sha256-kvvi8zAx2MHddhMnpk56OY+c/hx/d/85fVD7w3bDMq8=",
   "assets/print.js?v=bf94f90201": "sha256-v5T5AgFonSH1ZivbAKyIsonmD16MRvcmZxiSEg1vhe8=",
   "assets/app.js?v=490836c217": "sha256-SQg2wheNcRW+8/AYOB3+C8p6+Wl0Ix31+Np8+fSjPKM=",
-  "assets/pwa.js?v=cbfaa1dcac": "sha256-y/qh3Ky0kcCsPiN3UlsLCLKPG8K3SBVaR5hTb8HGtpM=",
+  "assets/pwa.js?v=8b9383a674": "sha256-i5ODpnRyq3LfbKBsHIbHQq293Prtd/8o47dbGsPhsTk=",
   "assets/icons/icon-192.png?v=dd14820c4e": "sha256-3RSCDE56Xa15HqySD9ZGh0pJ2Ix28oMtD/wTdgZGuSY=",
   "assets/print.css?v=71605f2d84": "sha256-cWBfLYQafEy2BwG8TkTb7AY/f59eB4epJNCk/2WNiTc=",
   "assets/print-page.js?v=0153be5c5b": "sha256-AVO+XFvhlqJXnZCRp7rg+jLWjEc5orTIuWtozm8cmYc=",
